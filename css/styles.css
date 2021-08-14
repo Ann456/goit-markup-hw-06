@@ -237,6 +237,7 @@ textarea {
 }
 
 .checkbox-label {
+  margin-left: auto;
   margin-top: 20px;
   display: flex;
   align-items: center;
