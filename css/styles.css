@@ -277,7 +277,7 @@ textarea {
 }
 
 .checkbox-label a {
-  padding-left: 2px;
+  padding-left: 3px;
   display: inline-block;
   font-family: Roboto;
   font-style: normal;
@@ -959,7 +959,7 @@ h4 {
 
 .footer-form {
   margin-top: 12px;
-  margin-left: 73px;
+  margin-left: 93px;
 }
 
 .footer-form p {
