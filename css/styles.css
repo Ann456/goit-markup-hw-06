@@ -104,10 +104,9 @@ a {
 
 .modal-button-close {
   position: absolute;
-  display: block;
+  display: flex;
   top: 8px;
-  margin-left: 93px;
-  transform: translate(-8%, 0);
+  right: 8px;
 }
 
 .button-close {
@@ -116,8 +115,6 @@ a {
 
   width: 30px;
   height: 30px;
-
-  margin-left: 490px;
 
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
