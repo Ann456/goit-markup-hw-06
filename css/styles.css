@@ -237,7 +237,7 @@ textarea {
 }
 
 .checkbox-label {
-  margin-left: auto;
+  margin-left: 52px;
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -277,6 +277,7 @@ textarea {
 }
 
 .checkbox-label a {
+  padding-left: 2px;
   display: inline-block;
   font-family: Roboto;
   font-style: normal;
