@@ -85,6 +85,8 @@ a {
 .modal {
   position: absolute;
 
+  padding: 40px 39px 40px 41px;
+
   top: 50%;
   left: 50%;
 
@@ -97,19 +99,27 @@ a {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(0.9);
-  /*transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;*/
   transition: transform 250ms var(--timing-function);
 }
 
-.icon-close {
+.modal-button-close {
+  position: absolute;
   display: block;
+  top: 8px;
+  left: 28%;
+  right: 100%;
+  transform: translate(50%, 0%);
+}
+
+.button-close {
+  position: relative;
+  display: inline-block;
+
   width: 30px;
   height: 30px;
-  padding: 6px;
-  margin-top: 8px;
+
   margin-left: 490px;
+
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50% 50%;
@@ -117,24 +127,31 @@ a {
     fill 250ms var(--timing-function);
 }
 
-.icon-close:hover,
-.icon-close:focus {
+.icon-close {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+
+.button-close:hover,
+.button-close:focus {
   fill: #ffffff;
   background: var(--logo-color);
   cursor: pointer;
 }
 
-.form-general p {
+.modal p {
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
 
+  margin-bottom: 12px;
+
   color: #212121;
-  margin-top: 2px;
 }
 
 textarea {
@@ -143,24 +160,32 @@ textarea {
 
 .form {
   display: block;
-  width: 448px;
   height: 342px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 12px;
+  margin-bottom: 20px;
 }
 
 .form-field {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.form-field .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
+}
+
+.form-field .box.last {
+  margin-bottom: 0;
 }
 
 .form-field svg {
   margin-left: 12px;
+  top: 25%;
   position: absolute;
-  top: 50%;
+
   width: 18px;
   height: 18px;
   fill: #212121;
@@ -199,13 +224,13 @@ textarea {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  cursor: pointer;
-  transition: border-color 250ms var(--timing-function);
+
+  transition: border 250ms var(--timing-function);
 }
 
 .form-field:focus-within textarea,
 .form-field:focus-within input {
-  border-color: var(--logo-color);
+  border: 1px solid var(--logo-color);
 }
 
 .form-field input::placeholder {
@@ -237,10 +262,12 @@ textarea {
 }
 
 .checkbox-label {
-  margin-left: 52px;
+  margin-left: auto;
   margin-top: 20px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .checkbox-icon {
@@ -272,6 +299,7 @@ textarea {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+  margin-bottom: 0;
 
   color: #757575;
 }
@@ -298,8 +326,6 @@ textarea {
 
   text-align: center;
   letter-spacing: 0.06em;
-  margin-top: 30px;
-  margin-bottom: 40px;
   padding: 10px 55px;
 
   color: #ffffff;
